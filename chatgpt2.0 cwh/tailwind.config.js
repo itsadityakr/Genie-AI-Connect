@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        chatBox:{50: '#09005A'}
+        chatblack: {50: '#343541'}
       }
-    }, 
+    },
   },
   plugins: [],
 }
