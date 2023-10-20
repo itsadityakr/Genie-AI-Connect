@@ -559,11 +559,6 @@ video {
   margin-right: 1rem;
 }
 
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -574,17 +569,16 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
-
 .mr-1 {
   margin-right: 0.25rem;
 }
 
 .mt-52 {
   margin-top: 13rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .flex {
@@ -595,6 +589,10 @@ video {
   height: 1rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -603,8 +601,8 @@ video {
   height: 2.25rem;
 }
 
-.h-\[100vh\] {
-  height: 100vh;
+.h-auto {
+  height: auto;
 }
 
 .h-fit {
@@ -622,6 +620,10 @@ video {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-6 {
@@ -692,10 +694,10 @@ video {
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -708,28 +710,19 @@ video {
   border-radius: 0.375rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.bg-\[\#202123\] {
+.bg-chatBlue-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(32 33 35 / var(--tw-bg-opacity));
-}
-
-.bg-chatblack-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(52 53 65 / var(--tw-bg-opacity));
+  background-color: rgb(9 0 90 / var(--tw-bg-opacity));
 }
 
 .bg-gray-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.bg-pureWhite-10 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -751,9 +744,19 @@ video {
   padding-right: 1.25rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-4 {
@@ -776,6 +779,10 @@ video {
 
 .pr-10 {
   padding-right: 2.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pt-80 {
@@ -805,9 +812,9 @@ video {
   font-weight: 700;
 }
 
-.text-gray-400 {
+.text-chatBlue-50 {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  color: rgb(9 0 90 / var(--tw-text-opacity));
 }
 
 .text-white {

@@ -20,4 +20,8 @@ async function postData(url = "", data = {}) {
     // Get the answer and populate it! 
     let result = await postData("/api", {"question": questionInput})
     solution.innerHTML = result.answer
+
+    function reloadPage() {
+      location.reload();
+  }
 })
