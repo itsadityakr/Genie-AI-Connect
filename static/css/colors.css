@@ -1,0 +1,78 @@
+.body{
+    background:rgb(9, 0, 90);
+    .main{
+        color:white;
+        .left{
+            background: #ffffff;
+            box-shadow: 2px 1px 5px 2px rgb(0, 0, 0);
+            .newChatB{
+                background:rgb(9, 0, 90);
+                border-color: rgb(9, 0, 90);
+            }
+            .RecentSearch{
+                color:rgb(9, 0, 90);
+            }
+            .chats{
+                .chat{
+                    border-left: rgb(9, 0, 90);
+                    background: #ffffff;
+                    color: #000;
+                    box-shadow: 1px 1px 1px 1px rgb(192, 190, 190);
+                }
+            }
+        }
+        .right1{
+            .gptTitle{
+                color: #ffffff;
+            }
+            .itemsrow{
+                .examples{
+                    #exSVG{
+                        stroke: #ffffff;
+                        fill: none;
+                    }
+                    .exB1,.exB2,.exB3{
+                        background:rgb(255, 255, 255);
+                        color: #000;
+                    }
+                }
+                .cap{
+                    #capSVG{
+                        stroke: #ffffff;
+                        fill: none;
+                    }
+                    .capB1,.capB2,.capB3{
+                        background:rgb(255, 255, 255);
+                        color: #000;
+                    }
+                }
+                .lim{
+                    #limSVG{
+                        stroke: #ffffff;
+                        fill: none;
+                    }
+                    .limB1,.limB2,.limB3{
+                        background:rgb(255, 255, 255);
+                        color: #000;
+                    }
+                }
+            }
+            .input{
+                .buttonsvg{
+                    .sendBar{
+                        background:rgb(255, 255, 255);
+                    }
+                    #sendButton{
+                        #sendButtonSVG{
+                            stroke: #000000;
+                            fill: none;
+                        }
+                    }
+                }
+                .textUnderSendBar{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

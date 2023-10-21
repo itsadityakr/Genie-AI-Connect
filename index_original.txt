@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="shortcut icon" href="https://chat.openai.com/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/static/css/colors.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <style>
         .right2 {
@@ -31,11 +30,11 @@
     </script>
 </head>
 
-<body class="body">
-    <div class="main flex h-auto">
-        <div class="left w-2/12 h-auto" style="max-height:100vh; overflow: auto; margin: 5px; border-radius : 10px">
+<body class="bg-chatBlue-50">
+    <div class="flex h-auto text-white">
+        <div class="left bg-pureWhite-10 w-2/12 h-auto" style="max-height:100vh; overflow: auto; margin: 5px; box-shadow: 2px 1px 5px 2px rgb(0, 0, 0); border-radius : 10px">
             <button
-                class="w-[90%] newChatB py-2 m-2 px-10 space-x-2 rounded-md flex mx-4 justify-center items-center" onclick="reloadPage()" style="border-width: 3px;">
+                class="w-[90%] newChatB py-2 m-2 px-10 space-x-2 bg-chatBlue-50 rounded-md flex mx-4 justify-center items-center" onclick="reloadPage()" style="border-width: 3px; border-color: rgb(9, 0, 90);">
                 <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
                     stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -43,10 +42,10 @@
                 </svg>
                 <span><strong>New Chat</strong></span>
             </button>
-            <div class="RecentSearch text-s m-4 margin-left-10px"><strong>Recent Search</strong></div>
+            <div class="text-s m-4 margin-left-10px text-chatBlue-50"><strong>Recent Search</strong></div>
             <div class="chats flex flex-col justify-center items-center space-y-3 py-2">
                 {% for chat in myChats %} 
-                <div class="chat space-x-2 opacity-100 w-[90%] px-2 py-2 border-2px border rounded-md cursor-pointer" style="display: flex; align-items: center; border-left-width: 6px;">
+                <div class="chat space-x-2 opacity-100 w-[90%] px-2 py-2 border-2px border rounded-md border-l-chatBlue-50 bg-pureWhite-10 text-black cursor-pointer" style="display: flex; align-items: center; border-left-width: 6px; box-shadow: 1px 1px 1px 1px rgb(192, 190, 190);">
                     <svg stroke="Black" fill="white" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 messageSVG" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
@@ -58,10 +57,10 @@
             </div>
         </div>
         <div class="right1 w-10/12 flex justify-center items-center flex-col h-fit mt-8">
-            <div class="gptTitle text-center w-full text-4xl font-bold my-10">ChatGPT 2.0</div>
+            <div class="text-center w-full text-4xl font-bold my-10">ChatGPT 2.0</div>
             <div class="itemsrow flex py-1 pt-4 w-[43vw] justify-around">
                 <div class="examples flex flex-col justify-center items-center">
-                    <svg stroke="currentColor" id="exSVG" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
+                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
                         stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em"
                         xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -76,32 +75,33 @@
                     </svg>
                     <div class="py-2">Examples</div>
                     <button
-                        class="exB1 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">"Explain
+                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">"Explain
                         quantum computing in simple terms" →</button>
-                    <button class="exB2 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">"Got
+                    <button class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">"Got
                         any creative ideas for a 10 year old’s birthday?" →</button>
-                    <button class="exB3 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">"How
+                    <button class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">"How
                         do I make an HTTP request in Javascript?" →</button>
                 </div>
                 <div class="cap flex flex-col justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" id="capSVG" aria-hidden="true" class="h-6 w-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" aria-hidden="true" class="h-6 w-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
                     </svg>
                     <div class="py-2">Capabilities</div>
                     <button
-                        class="capB1 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">Remembers
+                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">Remembers
                         what user said earlier in the conversation</button>
                     <button
-                        class="capB2 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">Allows
+                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">Allows
                         user to provide follow-up corrections</button>
                     <button
-                        class="capB3 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">Trained
+                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">Trained
                         to decline inappropriate requests</button>
                 </div>
 
                 <div class="lim flex flex-col justify-center items-center">
-                    <svg id="limSVG" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
+                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
                         stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -111,36 +111,37 @@
                         <line x1="12" y1="17" x2="12.01" y2="17"></line>
                     </svg>
                     <div class="py-2">Limitations</div>
-                    <button class="limB1 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md"> May
+                    <button class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md"> May
                         occasionally generate incorrect information</button>
-                    <button class="limB2 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">May
+                    <button class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">May
                         occasionally produce harmful instructions or biased content</button>
                     <button
-                        class="limB3 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">Limited
+                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4  my-2 rounded-md">Limited
                         knowledge of world and events after 2021</button>
                 </div>
             </div>
 
             <div class="input w-full text-center my-10 flex items-center justify-center flex-col">
                 <div class="buttonsvg pl-16 w-[50vw] flex">
-                    <input class="sendBar w-full p-4 rounded-md" placeholder="Send a Message" type="text"
+                    <input class="w-full p-4 bg-gray-600 rounded-md" placeholder="Send a Message" type="text"
                         name="text" id="questionInput">
 
                     <button id="sendButton" class="relative -left-20 pl-10">
-                        <svg id="sendButtonSVG" stroke-width="1.5" viewBox="0 0 24 24"
-                            stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em"
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em"
                             xmlns="http://www.w3.org/2000/svg">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
                     </button>
                 </div>
-                <div class="textUnderSendBar text-xs py-3 opacity-70">Free Research Preview. ChatGPT may produce inaccurate
+                <div class="text-xs py-3 opacity-70">Free Research Preview. ChatGPT may produce inaccurate
                     information about people, places, or facts. <a class="underline"
                         href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT Mar 23
                         Version</a></div>
             </div>
         </div>
+
         <div class="right2 w-full flex flex-col items-center h-fit">
             <div class="box1 m-auto py-7 flex justify-start w-[40vw] items-center space-x-6">
                 <img class="w-9"
