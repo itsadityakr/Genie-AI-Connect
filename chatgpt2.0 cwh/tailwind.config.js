@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors:{
         chatBlue: {50: '#09005A'},
-        pureWhite: {10:"#FFFFFF"}
+        pureWhite: {10:"#FFFFFF"},
+        
       }
     },
   },
