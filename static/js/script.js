@@ -25,3 +25,24 @@ async function postData(url = "", data = {}) {
       location.reload();
   }
 })
+const inputElement = document.getElementById("questionInput");
+const buttonElement = document.getElementById("sendButton");
+
+inputElement.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        // Trigger a click on the button
+        buttonElement.click();
+    }
+});
+
+buttonElement.addEventListener("click", function() {
+    // Add your code to handle the button click here
+    // You can access the input value with inputElement.value
+    const inputValue = inputElement.value;
+    // Perform your desired action, e.g., sending a message
+    console.log("Sending message: " + inputValue);
+    // Clear the input field
+    inputElement.value = "";
+});

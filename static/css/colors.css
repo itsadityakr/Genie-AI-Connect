@@ -18,6 +18,18 @@
                     background: #ffffff;
                     color: #000;
                     box-shadow: 1px 1px 1px 1px rgb(192, 190, 190);
+                    #bubbleMessageSVG{
+                        stroke: #000000;
+                        fill: #ffffff;
+                    }
+                    #copySVG{
+                        stroke: #000000;
+                        fill: #ffffff;
+                    }
+                    #copyToSendBarSVG{
+                        stroke: #000000;
+                        fill: #ffffff;
+                    }
                 }
             }
         }
@@ -61,6 +73,7 @@
                 .buttonsvg{
                     .sendBar{
                         background:rgb(255, 255, 255);
+                        color: #000;
                     }
                     #sendButton{
                         #sendButtonSVG{
@@ -71,6 +84,34 @@
                 }
                 .textUnderSendBar{
                     color: #ffffff;
+                }
+            }
+        }
+        .right2{
+            .box1{
+                #question2{
+                    color: rgb(255, 0, 0);
+                }
+            }
+            .box2{
+                background: #ffffff;
+                #question1{
+                    color: rgb(238, 255, 0);
+                }
+                #solution{
+                    color: rgb(4, 0, 255);
+                }
+            }
+            .input{
+                .buttonsvg{
+                    .inputbox{
+                        background: #ffffff;
+                        color: #000;
+                    }
+                    #AfterSolArrow{
+                        stroke: #000000;
+                            fill: none;
+                    }
                 }
             }
         }

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, redirect, url_for
+from flask import Flask, render_template, jsonify, request
 from flask_pymongo import PyMongo
 import openai
 
@@ -14,16 +14,6 @@ def home():
     myChats = [chat for chat in chats]
     print(myChats)
     return render_template("index.html", myChats = myChats)
-
-@app.route("/delete_query", methods=["POST"])
-def delete_query():
-    if request.method == "POST":
-        question_to_delete = request.form.get("question")
-
-        mongo.db.chats.delete_one({"question": question_to_delete})
-
-        return redirect(url_for("home"))
-
 
 @app.route("/api", methods=["GET", "POST"])
 def qa():
