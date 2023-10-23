@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/dropDownMenu.css">
     <link rel="stylesheet" href="/static/css/lightModeColors.css">
+    <link rel="stylesheet" href="/static/css/darkModeToggle.css">
     <title>ChatGPT 2.0</title>
 </head>
 <body class="body">
+    <header>
+        <label  id="dark-change"></label>
+      </header>
     <script src="/static/js/copyButtons.js"></script>
     <div class="main flex h-auto">
         <div class="left w-[20vw] h-[96.65vh]" style="max-height:100vh; overflow: auto; margin: 0.3cm; border-radius : 10px">
@@ -28,7 +32,7 @@
             <div class="RecentSearch text-s m-4 margin-left-10px"><strong>Recent Search</strong></div>
             <div class="chats flex flex-col justify-center items-center space-y-3 py-2">
                 {% for chat in myChats %} 
-                <div class="chat space-x-2 opacity-100 w-[90%] px-2 py-2 border-2px border rounded-md cursor-pointer" style="display: flex; align-items: center; border-left-width: 6px;">
+                <div class="chat space-x-2 opacity-100 w-[90%] px-2 py-2 border-2px border rounded-md cursor-pointer" style="display: flex; align-items: center;">
                     <svg id="bubbleMessageSVG" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 messageSVG" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
@@ -117,13 +121,13 @@
             <div class="input w-full text-center flex items-center justify-center flex-col" style="margin-top:40px;">
                 <div class="buttonsvg pl-16 flex" style="width:60vw;">
                     <input class="sendBar w-full p-4 rounded-md" placeholder="Send a Message" type="text" name="text" id="questionInput">
-                    <button id="sendButton" class="relative -left-20 pl-10">
+                    <strong></strong><button id="sendButton" class="relative -left-20 pl-10">
                         <svg id="sendButtonSVG" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
                             class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
-                    </button>
+                    </button></strong>
                 </div>
                 <div class="textUnderSendBar text-xs py-3 opacity-70">Free Research Preview. ChatGPT may produce inaccurate
                     information about people, places, or facts. <a class="underline"
@@ -132,15 +136,17 @@
                 </div>
             </div>
         </div>
-        <div class="right2 w-full flex flex-col items-center h-fit">
-            <div class="box1 m-auto py-5 flex justify-start w-[50vw] items-center space-x-6">
+        <div class="right2 w-[78vw] flex flex-col items-center py-3 h-fit">
+            <div class="breakQA py-4">Welcome to Chatgpt</div>
+            <div class="box1 m-auto py-5 flex justify-center items-center space-x-6">
                 <img id="userImg" class="w-9"
                     src="https://chat.openai.com/_next/image?url=https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FAGNmyxa_a9M6k_RYXQha8eMOIDL6EaNReM0_CDX3hBi2%3Ds96-c&w=96&q=75"
                     alt="">
                 <div id="question2">Loading...</div>
             </div>
-            <div class="box2 py-7 flex justify-center w-full items-center">
-                <div class="box w-[40vw] flex justify-start space-x-6">
+            <div class="breakQA py-1"></div>
+            <div class="box2 py-10 flex justify-center items-center">
+                <div class="box w-[40vw] flex justify-center space-x-6">
                     <img id="chatGPTicon" class="w-9 h-9" src="https://chat.openai.com/favicon.ico" alt="">
                     <div id="solutionContent" class="flex space-y-4 flex-col">
                         <div id="question1">Loading...</div>
