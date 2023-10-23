@@ -2,14 +2,13 @@
     display: inline-block;
 }
 .dropdown .ddButton{
-    color: black;
+
     border: none;
     cursor: pointer;
     opacity: 0.4;
 }
 .dropdown .ddcontent{
     display: none;
-    background-color: white;
 }
 .dropdown:hover .ddcontent{
     align-items: center;

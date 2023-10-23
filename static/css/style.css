@@ -5,13 +5,10 @@
     display: none;
 }
 .delete-button {
-    background: none;
     border: none;
     cursor: pointer;
 }
 .delete-query-svg {
-    fill: none;
-    stroke: currentColor;
     stroke-width: 2;
     width: 1em;
     height: 1em;

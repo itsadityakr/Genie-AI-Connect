@@ -50,11 +50,13 @@
 }
 
 .dropdown {
-    background:none;
+    background-color: white;
+    color: black;
 }
 
 .ddButton {
     background:none;
+    color: black;
 }
 
 #threeDots {
@@ -62,7 +64,7 @@
 }
 
 .ddcontent {
-    background: none;
+    background-color: white;
 }
 
 .chat-entry {
