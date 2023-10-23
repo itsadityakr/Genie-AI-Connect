@@ -46,3 +46,6 @@ buttonElement.addEventListener("click", function() {
     // Clear the input field
     inputElement.value = "";
 });
+function reloadPage() {
+  location.reload();
+}
