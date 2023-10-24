@@ -4,7 +4,6 @@
 .dropdown .ddButton{
 
     border: none;
-    cursor: pointer;
     opacity: 0.4;
 }
 .dropdown .ddcontent{
@@ -15,9 +14,21 @@
     justify-content: center;
     display:inline-flex;
 }
+
 .dropdown:hover .ddButton{
     opacity: 1;
 }
+.chat:hover .ddcontent{
+    align-items: center;
+    justify-content: center;
+    display:inline-flex;
+}
+
+.chat:hover .ddButton{
+    opacity: 1;
+}
+
+
 #deleteQuerySVG{
     margin-top: 4px;
     margin-left: 2px;

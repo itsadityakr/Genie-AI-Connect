@@ -534,6 +534,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -634,16 +638,16 @@ video {
   width: 20vw;
 }
 
-.w-\[40vw\] {
-  width: 40vw;
-}
-
 .w-\[43vw\] {
   width: 43vw;
 }
 
-.w-\[50vw\] {
-  width: 50vw;
+.w-\[73\.5vw\] {
+  width: 73.5vw;
+}
+
+.w-\[78vw\] {
+  width: 78vw;
 }
 
 .w-\[90\%\] {
@@ -654,107 +658,6 @@ video {
   width: 100%;
 }
 
-.w-\[9\%\] {
-  width: 9%;
-}
-
-.w-\[\%\] {
-  width: %;
-}
-
-.w-\[7\%\] {
-  width: 7%;
-}
-
-.w-\[70\%\] {
-  width: 70%;
-}
-
-.w-\[8\%\] {
-  width: 8%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
-}
-
-.w-\[75\%\] {
-  width: 75%;
-}
-
-.w-\[77\%\] {
-  width: 77%;
-}
-
-.w-\[79\%\] {
-  width: 79%;
-}
-
-.w-\[0vw\] {
-  width: 0vw;
-}
-
-.w-\[60vw\] {
-  width: 60vw;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.w-7 {
-  width: 1.75rem;
-}
-
-.w-px {
-  width: 1px;
-}
-
-.w-\[70vw\] {
-  width: 70vw;
-}
-
-.w-\[7vw\] {
-  width: 7vw;
-}
-
-.w-\[vw\] {
-  width: vw;
-}
-
-.w-\[8vw\] {
-  width: 8vw;
-}
-
-.w-\[80vw\] {
-  width: 80vw;
-}
-
-.w-\[78vw\] {
-  width: 78vw;
-}
-
-.w-\[78v\] {
-  width: 78v;
-}
-
-.w-\[78vh\] {
-  width: 78vh;
-}
-
-.w-\[8\] {
-  width: 8;
-}
-
-.w-\[80\] {
-  width: 80;
-}
-
-.w-\[80v\] {
-  width: 80v;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -763,16 +666,16 @@ video {
   cursor: pointer;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-center {
@@ -834,6 +737,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -857,16 +765,6 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .pl-10 {

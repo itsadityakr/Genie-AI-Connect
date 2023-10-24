@@ -55,7 +55,7 @@
 }
 
 .dropdown {
-    background-color: #FEF2F2;
+    background-color: white;
     color: black;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .ddcontent {
-    background-color: #FEF2F2;
+    background-color: NONE;
 }
 
 .chat-entry {
@@ -239,7 +239,7 @@ input.sendBar::placeholder {
 }
 
 #sendButtonSVG {
-    stroke: #000000;
+    stroke: #ffffff;
     fill: none;
 }
 
@@ -254,9 +254,6 @@ input.sendBar::placeholder {
     background: #F03861;
     color: #FEF2F2;
     border-radius: 10px;
-}
-#userImg{
-    background: none;
 }
 #question2{
     color: rgb(255, 255, 255);
@@ -277,9 +274,13 @@ input.sendBar::placeholder {
 }
 #question1{
     background: none;
+    font-weight: bold;
     color: #000;
 }
 #solution{
     background: none;
     color: #000;
+}
+#sendAnewMessageSVG{
+    stroke: #000000;
 }

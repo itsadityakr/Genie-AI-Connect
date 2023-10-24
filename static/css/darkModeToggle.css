@@ -291,16 +291,4 @@ body.night {
     .respon {
         display: flex;
     }
-
-    img {
-        height: 50%;
-        width: auto;
-        padding-top: 3vh;
-        padding-right: 5%;
-    }
-
-    p {
-        max-width: 80%;
-        line-height: 30px;
-    }
 }
