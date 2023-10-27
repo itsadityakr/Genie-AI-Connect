@@ -1,0 +1,59 @@
+.dropdown:hover .dropdown-content{
+    align-items: center;
+    justify-content: center;
+    display:inline-flex;
+}z
+.dropdown:hover .dropdown-B{
+    visibility: hidden;
+}
+.search-chat:hover .dropdown-content{
+    align-items: center;
+    justify-content: center;
+    display:inline-flex;
+}
+.search-chat:hover .dropdown-B{
+    opacity: 1;
+    visibility: hidden;
+}
+#delete-svg-ID:hover{
+    width: auto;;
+    height: 25px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    padding: 2px;
+}
+#copy-clipboard-svg-ID:hover{
+    width: auto;;
+    height: 25px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    padding: 2px;
+}
+#copy-send-bar-svg-ID:hover{
+    width: auto;;
+    height: 25px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    padding: 2px;
+}
+.new-chat-B:hover{
+    border-color: #F03861;
+}
+.search-chat:hover{
+    border: 2.3px solid #F03861;
+    border-left-width: 8px;
+}
+#send-svg-ID:hover {
+    stroke: #ffffff;
+    fill: none;
+    transform: rotate(45deg);
+}
+
+#theme-change-svg-ID:hover{
+    transform: scaleX(-1);
+}
+
+.send-a-new-message-bar-B:hover{
+    border-color: #F03861;
+    box-shadow: 1px 1px 1px #000000;
+}

@@ -1,0 +1,26 @@
+.dropdown{
+    display: inline-block;
+}
+.dropdown .ddButton{
+
+    border: none;
+    opacity: 0.4;
+}
+.dropdown .dropdown-content{
+    display: none;
+}
+
+#delete-svg-ID{
+    margin-top: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#copy-clipboard-svg-ID{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#copy-send-bar-svg-ID{
+    margin-bottom: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+}

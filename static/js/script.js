@@ -12,8 +12,8 @@ async function postData(url = "", data = {}) {
   return response.json(); // Parse and return the JSON response
 }
 
-// Get a reference to the "sendButton" element
-sendButton.addEventListener("click", async () => { 
+// Get a reference to the "send-button" element
+sendB.addEventListener("click", async () => { 
   // Get the value of the input field with the ID "questionInput"
   questionInput = document.getElementById("questionInput").value;
   // Clear the input field
@@ -22,13 +22,13 @@ sendButton.addEventListener("click", async () => {
   document.querySelector(".right2").style.display = "block";
   document.querySelector(".right1").style.display = "none";
 
-  // Set the content of "question1" and "question2" elements to the input value
-  question1.innerHTML = questionInput;
-  question2.innerHTML = questionInput;
+  // Set the content of "user_question_ID" and "user_sol_w_question_ID" elements to the input value
+  user_question_ID.innerHTML = questionInput;
+  user_sol_w_question_ID.innerHTML = questionInput;
 
   // Get the answer from the server and populate it
   let result = await postData("/api", { "question": questionInput });
-  solution.innerHTML = result.answer;
+  answer_ID.innerHTML = result.answer;
 
   // Define a function to reload the page
   function reloadPage() {
@@ -38,7 +38,7 @@ sendButton.addEventListener("click", async () => {
 
 // Get references to the "inputElement" and "buttonElement"
 const inputElement = document.getElementById("questionInput");
-const buttonElement = document.getElementById("sendButton");
+const buttonElement = document.getElementById("sendB");
 
 // Listen for the "keyup" event on the input element
 inputElement.addEventListener("keyup", function(event) {
@@ -68,19 +68,19 @@ function reloadPage() {
 
 // Get references to the "content" and "darkMode" elements
 var content = document.getElementsByTagName('body')[0];
-var darkMode = document.getElementById('dark-change');
+var darkMode = document.getElementById('theme-change');
 var isDarkMode = localStorage.getItem('darkMode');
 
 // Check if the user's preference for dark mode is saved in localStorage
 if (isDarkMode === 'true') {
-  darkMode.classList.add('active');
-  content.classList.add('night');
+  darkMode.classList.add('dark-theme');
+  content.classList.add('light-theme');
 }
 
 // Listen for a click on the "dark-change" element and toggle dark mode
 darkMode.addEventListener('click', function() {
-  darkMode.classList.toggle('active');
-  content.classList.toggle('night');
+  darkMode.classList.toggle('dark-theme');
+  content.classList.toggle('light-theme');
 
   // Save the state in localStorage
   if (darkMode.classList.contains('active')) {
@@ -89,3 +89,31 @@ darkMode.addEventListener('click', function() {
     localStorage.setItem('darkMode', 'false');
   }
 });
+
+function copyToClipboard(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+  alert("Copied: " + text);
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const questionInput = document.getElementById("questionInput");
+
+  for (let i = 1; i <= 10; i++) {
+      const copyButton = document.getElementById("copy-button" + i);
+      copyButton.addEventListener("click", function () {
+          const buttonText = copyButton.textContent.trim();
+          questionInput.value = buttonText;
+      });
+  }
+});
+function copyToInput(content) {
+  var questionInput = document.getElementById("questionInput");
+
+  if (questionInput) {
+      questionInput.value = content;
+  }
+}
