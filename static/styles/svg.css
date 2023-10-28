@@ -1,3 +1,15 @@
+/* 
+Background Colors:
+#000000 - Black color.
+#ffffff - White color.
+#ddbaff - A shade of purple.
+#ED1C24 - Red color.
+#0066B3 - Blue color.
+#FFF200 - Yellow color.
+#F58220 - Orange color.
+#00A65D - Green color.
+#5C2D91 - Purple color.
+*/
 #plus-svg-ID {
     stroke: #000000;
     fill: none;
@@ -60,6 +72,10 @@
 
 #github-svg-ID path:nth-child(1) {
     fill: #000000;
+}
+
+#send-2-svg-ID{
+    stroke: #000000;
 }
 
 #github-svg-ID path:nth-child(2),

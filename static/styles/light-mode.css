@@ -1,3 +1,25 @@
+/* 
+Background Colors:
+#FEF2F2 - Light pinkish background.
+#f5c85f - Yellowish background.
+#F03861 - Dark pinkish background.
+#ffffff - White background.
+
+Text Colors:
+#495E57 - Dark greenish text color.
+#000000 - Black text color.
+#FEF2F2 - White text color.
+#ffffff - White text color.
+#000000 - Black text color.
+
+Border Colors:
+#000000 - Black border color.
+#F03861 - Dark pinkish border color.
+
+Box Shadow Colors:
+#000000 - Black box shadow color.
+*/
+
 .main {
     background: #FEF2F2;
     color:#495E57;
@@ -195,7 +217,7 @@ input.input-bar::placeholder {
 #send-a-new-message-bar-B-text-ID{
     color: #000000;
 }
-#send-2-svg-ID{
-    stroke: #000000;
-}
+
+
+
 
