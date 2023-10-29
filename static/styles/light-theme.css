@@ -1,0 +1,206 @@
+:root {
+    --background-1-col: #FEF2F2;
+    --background-2-col: #f5c85f;
+    --background-3-col: #F03861;
+    --background-4-col: #ffffff;
+    --text-col: #000000;
+    --border-col: #000000;
+    --shadow-col: #000000;
+}
+.main {
+    background: var(--background-1-col);
+}
+
+.left {
+    background: var(--background-2-col);
+    box-shadow: 1px 1px 1px 1px var(--shadow-col);
+}
+
+.new-chat-B {
+    background: var(--background-1-col);
+    border-color: var(--border-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+#new-chat-B-text-ID {
+    color: var(--text-col);
+}
+
+.content {
+    color: var(--text-col);
+}
+
+.search-chat {
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    background: var(--background-4-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+    color: var(--text-col);
+    border-left-width: 8px;
+}
+
+#chat-question-ID {
+    color: var(--text-col);
+}
+
+.dropdown {
+    background-color: var(--background-4-col);
+    color: var(--text-col);
+}
+
+.dropdown-B {
+    color: var(--text-col);
+}
+
+.text-title {
+    color: var(--text-col);
+}
+
+.examples-text {
+    color: var(--text-col);
+}
+
+.exB1 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.exB2 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.exB3 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.capabilities-text {
+    color: var(--text-col);
+}
+
+.capB1 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.capB2 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.capB3 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.limitations-text {
+    color: var(--text-col);
+}
+
+.limB1 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.limB2 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.limB3 {
+    background: var(--background-2-col);
+    color: var(--text-col);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--background-3-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+.input-bar {
+    background: var(--background-3-col);
+    color: var(--background-4-col);
+    font-weight: bold;
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+input.input-bar::placeholder {
+    color: var(--background-4-col);
+}
+
+.text-under-input-bar {
+    color: var(--text-col);
+    font-weight: bold;
+}
+
+#top-box-content-ID {
+    color: var(--text-col);
+}
+
+.user-question-box {
+    background: var(--background-3-col);
+    color: var(--background-1-col);
+    border-radius: 10px;
+}
+
+#user_question_ID {
+    color: var(--background-4-col);
+    font-weight: bold;
+}
+
+.answer-box {
+    background: var(--background-2-col);
+    border-radius: 10px;
+}
+
+#user_sol_w_question_ID {
+    font-weight: bold;
+    color: var(--text-col);
+}
+
+#answer_ID {
+    color: var(--text-col);
+}
+
+.send-a-new-message-bar-B {
+    background: var(--background-1-col);
+    border-color: var(--border-col);
+    box-shadow: 1px 1px 2px var(--shadow-col);
+}
+
+#send-a-new-message-bar-B-text-ID {
+    color: var(--text-col);
+}

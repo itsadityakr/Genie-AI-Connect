@@ -1,3 +1,24 @@
+/* 
+Background Colors:
+#FEF2F2 - Light pinkish background.
+#f5c85f - Yellowish background.
+#F03861 - Dark pinkish background.
+#ffffff - White background.
+
+Text Colors:
+#000000 - Black text color.
+#FEF2F2 - White text color.
+#ffffff - White text color.
+#000000 - Black text color.
+
+Border Colors:
+#000000 - Black border color.
+#F03861 - Dark pinkish border color.
+
+Box Shadow Colors:
+#000000 - Black box shadow color.
+*/
+
 #theme-change-svg-ID {
     position: absolute;
     width: auto;
@@ -18,7 +39,7 @@
 
 .light-theme {
     .main {
-        background: #FEF2F2;
+        background: #e91b1b;
         color:#495E57;
     }
     .left {
