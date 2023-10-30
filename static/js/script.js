@@ -108,3 +108,22 @@ function copyToInput(content) {
       questionInput.value = content;
   }
 }
+
+
+
+
+
+runSpeechRecog = () => {
+  document.getElementById("questionInput").value = "Loading text..."; // Changed innerHTML to value
+  var action = document.getElementById('mic-svg-ID');
+  let recognition = new webkitSpeechRecognition();
+  recognition.onstart = () => {
+     action.innerHTML = "Listening...";
+  }
+  recognition.onresult = (e) => {
+     var transcript = e.results[0][0].transcript;
+     document.getElementById('questionInput').value = transcript; // Changed innerHTML to value
+     action.innerHTML = "Speech"; // Restore the button text
+  }
+  recognition.start();
+}

@@ -80,3 +80,8 @@
 .send-a-new-message-bar{
     background: none;
 }
+
+.send-svgs{
+    display: flex;
+    align-items: center;
+}

@@ -33,6 +33,7 @@
     </header>
     <div class="main flex h-auto">
         <div class="left w-[20vw] h-[96.65vh]" style="max-height:100vh; overflow: auto; margin: 0.3cm; border-radius : 10px">
+            <div class="div2">
             <button
                 class="w-[90%] new-chat-B py-2 m-2 px-10 space-x-2 rounded-md flex mx-4 justify-center items-center" onclick="reloadPage()" style="border-width: 3px;">
                 <svg id="plus-svg-ID" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -42,6 +43,7 @@
                 </svg>
                 <span id="new-chat-B-text-ID"><strong>New Chat</strong></span>
             </button>
+        </div>
             <div class="content text-s m-4 margin-left-10px">
                 <strong>Recent Search</strong>
             </div>
@@ -149,7 +151,13 @@
                             <line x1="22" y1="2" x2="11" y2="13"></line>
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
-                    </button></strong>
+                        <button id="micB">
+                            <svg id="mic-svg-ID" class="speaker h-6 w-6" stroke-width="0.1" onclick="runSpeechRecog()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+                            </svg>
+                        </button>
+                    </button>
                 </div>
                 <div class="text-under-input-bar text-xs py-3 opacity-70">Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. 
                     <a class="underline" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" title="Original ChatGPT Release Notes">ChatGPT Mar 23 Version

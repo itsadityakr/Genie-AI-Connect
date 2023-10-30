@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Speech to Text</title>
+</head>
+<body>
+   <button id="action" class="speaker" onclick="runSpeechRecog()" style="border: transparent; padding: 0 0.5rem;">
+      Speech
+   </button>
+   <div class="input w-full text-center flex items-center justify-center flex-col" style="margin-top:40px;color:red;">
+      <div class="input-send-bar pl-16 flex" style="width:60vw;">
+          <input id="questionInput" class="input-bar w-full p-4 rounded-md" placeholder="Send a Message" type="text" name="text">
+          <button id="sendB" class="relative -left-20 pl-10">
+              <svg id="send-svg-ID" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                  class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+          </button>
+      </div>
+      <div class="text-under-input-bar text-xs py-3 opacity-70">Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. 
+          <a class="underline" href="https://help.openai.com/en/articles/6825453/chatgpt-release-notes" title="Original ChatGPT Release Notes">ChatGPT Mar 23 Version
+          </a>
+      </div>
+   </div>
+   <script>
+   </script>
+</body>
+</html>

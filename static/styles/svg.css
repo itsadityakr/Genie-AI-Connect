@@ -59,6 +59,11 @@ Background Colors:
     fill: none;
 }
 
+#mic-svg-ID{
+    stroke: #000000;
+    fill: #000000;
+}
+
 .send-2-svg path,
 .send-2-svg polygon,
 .send-2-svg rect {
