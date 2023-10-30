@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="/static/styles/styles.css">
     <link rel="stylesheet" href="/static/styles/svg.css">
     <link rel="stylesheet" href="/static/styles/none.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>ChatGPT 2.0</title>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
@@ -47,7 +50,7 @@
             <div class="content text-s m-4 margin-left-10px">
                 <strong>Recent Search</strong>
             </div>
-            <div class="all-chats flex flex-col justify-center items-center space-y-3 py-2">
+            <div class="all-chats flex flex-col justify-center items-center space-y-3 py-2" style="font-size:15px;">
                 {% for chat in myChats %} 
                 <div class="search-chat space-x-2 opacity-100 w-[90%] px-2 py-2 border-2px border rounded-md" style="display: flex; align-items: center;">
                     <svg id="message-svg-ID" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -146,17 +149,16 @@
                 <div class="input-send-bar pl-16 flex" style="width:60vw;">
                     <input id="questionInput" class="input-bar w-full p-4 rounded-md" placeholder="Send a Message" type="text" name="text">
                     <button id="sendB" class="relative -left-20 pl-10">
-                        <svg id="send-svg-ID" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
-                            class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="send-svg-ID" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
-                        <button id="micB">
-                            <svg id="mic-svg-ID" class="speaker h-6 w-6" stroke-width="0.1" onclick="runSpeechRecog()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
-                                <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
-                            </svg>
-                        </button>
+                    </button>
+                    <button id="micB" onclick="runSpeechRecog()">
+                        <svg id="mic-svg-ID" class="speaker h-6 w-6" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+                            <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+                        </svg>
                     </button>
                 </div>
                 <div class="text-under-input-bar text-xs py-3 opacity-70">Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. 

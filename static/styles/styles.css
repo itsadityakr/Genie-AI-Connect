@@ -1,23 +1,22 @@
 .right2 {
-    display: none;
+  display: none;
 }
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 .delete-button {
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 .delete-query-svg {
-    stroke-width: 2;
-    width: 1em;
-    height: 1em;
+  stroke-width: 2;
+  width: 1em;
+  height: 1em;
 }
-.send-2-svg {
+.send-2-svg { 
   width: 1.75em;
   height: 1.75em;
 }
-  .under2{
-    background: url('data:image/svg+xml,https://icons8.com/icon/PkZo9Dc4gidd/v');
-  }
-  
+.under2{
+  background: url('data:image/svg+xml,https://icons8.com/icon/PkZo9Dc4gidd/v');
+}
