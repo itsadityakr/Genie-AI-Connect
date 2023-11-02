@@ -19,6 +19,7 @@
     <title>ChatGPT 2.0</title>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
+<html class="html" id="htmlID">
 <body class="body" id="bodyID">
     <header class="theme-header" id="theme-headerID">
         <label id="theme-change" title="Change Theme">
@@ -34,11 +35,11 @@
             </svg>              
         </label>
     </header>
-    <div class="main flex h-auto">
-        <div class="left w-[20vw] h-[96.65vh]" style="max-height:100vh; overflow: auto; margin: 0.3cm; border-radius : 10px">
+    <div class="main">
+        <div class="left" >
             <div class="div2">
             <button
-                class="w-[90%] new-chat-B py-2 m-2 px-10 space-x-2 rounded-md flex mx-4 justify-center items-center" onclick="reloadPage()" style="border-width: 3px;">
+                class="new-chat-B space-x-2" onclick="reloadPage()">
                 <svg id="plus-svg-ID" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
                     stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -47,16 +48,16 @@
                 <span id="new-chat-B-text-ID"><strong>New Chat</strong></span>
             </button>
         </div>
-            <div class="content text-s m-4 margin-left-10px">
+            <div class="content">
                 <strong>Recent Search</strong>
             </div>
-            <div class="all-chats flex flex-col justify-center items-center space-y-3 py-2" style="font-size:15px;">
+            <div class="all-chats space-y-3">
                 {% for chat in myChats %} 
-                <div class="search-chat space-x-2 opacity-100 w-[90%] px-2 py-2 border-2px border rounded-md" style="display: flex; align-items: center;">
+                <div class="search-chat space-x-2">
                     <svg id="message-svg-ID" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
-                    <span id="chat-question-ID" style="flex: 1;">{{ chat.question }}</span>
+                    <span id="chat-question-ID">{{ chat.question }}</span>
                     <div class="dropdown">
                         <button class="dropdown-B">
                             <svg id="three-dots-svg-ID" style="cursor:auto;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
@@ -77,13 +78,13 @@
                                     </button>
                                 </form>
                             </div>
-                            <div class="copy-to-clipboard" style="cursor:pointer;" title="Copy to Clipboard">
+                            <div class="copy-to-clipboard" title="Copy to Clipboard">
                                 <svg id="copy-clipboard-svg-ID" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" onclick="copyToClipboard('{{ chat.question }}')" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
                                     <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
                                 </svg>
                             </div>
-                            <div class="copy-to-sendbar" style="cursor:pointer;" title="Copy to Search Bar">
+                            <div class="copy-to-send-bar" title="Copy to Search Bar">
                                 <svg id="copy-send-bar-svg-ID" onclick="copyToInput('{{ chat.question }}')" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" transform="rotate(90 12 12)"></path>
                                     <polyline points="16 17 21 12 16 7" transform="rotate(90 12 12)"></polyline>
@@ -97,10 +98,10 @@
             </div>
         </div>
 
-        <div class="right1 w-10/12 flex justify-center items-center flex-col h-auto" style="margin-top:2px;">
-            <div class="text-title text-center w-full text-4xl font-bold my-10">ChatGPT 2.0</div>
-            <div class="items-row flex py-1 pt-4 w-[43vw] justify-around">
-                <div class="examples flex flex-col justify-center items-center">
+        <div class="right1">
+            <div class="text-title">ChatGPT 2.0</div>
+            <div class="items-row">
+                <div class="examples">
                     <svg id="examples-svg-ID" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
                         stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em"
                         xmlns="http://www.w3.org/2000/svg">
@@ -114,24 +115,24 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                    <div class="examples-text py-2">Examples</div>
-                    <button class="exB1 w-[13vw] text-sm py-4 px-4 mx-4 my-2 rounded-md" id="copy-button1">"How can I improve my time management skills?"</button>
-                    <button class="exB2 w-[13vw] text-sm py-4 px-4 mx-4 my-2 rounded-md" id="copy-button2">"What do you think the future of space exploration will look like in 50 years?"</button>
-                    <button class="exB3 w-[13vw] text-sm py-4 px-4 mx-4 my-2 rounded-md" id="copy-button3">"Tell me a joke."</button>
+                    <div class="examples-text">Examples</div>
+                    <button class="exB1" id="copy-button1">"How can I improve my time management skills?"</button>
+                    <button class="exB2" id="copy-button2">"What will happen after 50 years?"</button>
+                    <button class="exB3" id="copy-button3">"Tell me a joke in Hindi."</button>
                 </div>
 
-                <div class="capabilities flex flex-col justify-center items-center">
+                <div class="capabilities">
                     <svg id="capabilities-svg-ID" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true" class="h-6 w-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
                     </svg>
-                    <div class="capabilities-text py-2">Capabilities</div>
-                    <button class="capB1 w-[13vw] text-sm py-4 px-4 mx-4  my-2 rounded-md" id="copy-button4">Remembers what user said earlier in the conversation</button>
-                    <button class="capB2 w-[13vw] text-sm py-4 px-4 mx-4  my-2 rounded-md" id="copy-button5">Allows user to provide follow-up corrections</button>
-                    <button class="capB3 w-[13vw] text-sm py-4 px-4 mx-4  my-2 rounded-md" id="copy-button6">Trained to decline inappropriate requests</button>
+                    <div class="capabilities-text">Capabilities</div>
+                    <button class="capB1" id="copy-button4">Remembers what user said earlier in the conversation</button>
+                    <button class="capB2" id="copy-button5">Allows user to provide follow-up corrections</button>
+                    <button class="capB3" id="copy-button6">Trained to decline inappropriate requests</button>
                 </div>
 
-                <div class="limitations flex flex-col justify-center items-center">
+                <div class="limitations">
                     <svg id="limitations-svg-ID" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
                         stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em"
                         xmlns="http://www.w3.org/2000/svg">
@@ -139,37 +140,36 @@
                         <line x1="12" y1="9" x2="12" y2="13"></line>
                         <line x1="12" y1="17" x2="12.01" y2="17"></line>
                     </svg>
-                    <div class="limitations-text py-2">Limitations</div>
-                    <button class="limB1 w-[13vw] text-sm py-4 px-4 mx-4  my-2 rounded-md" id="copy-button7">Sometime generates incorrect information</button>
-                    <button class="limB2 w-[13vw] text-sm py-4 px-4 mx-4  my-2 rounded-md" id="copy-button8">May produce harmful or biased content</button>
-                    <button class="limB3 w-[13vw] text-sm py-4 px-4 mx-4  my-2 rounded-md" id="copy-button9">Limited knowledge of events after 2021</button>
+                    <div class="limitations-text">Limitations</div>
+                    <button class="limB1" id="copy-button7">Sometime generates incorrect information</button>
+                    <button class="limB2" id="copy-button8">May produce harmful or biased content</button>
+                    <button class="limB3" id="copy-button9">Limited knowledge of events after 2021</button>
                 </div>
             </div>
-            <div class="input w-full text-center flex items-center justify-center flex-col" style="margin-top:40px;">
-                <div class="input-send-bar pl-16 flex" style="width:60vw;">
-                    <input id="questionInput" class="input-bar w-full p-4 rounded-md" placeholder="Send a Message" type="text" name="text">
-                    <button id="sendB" class="relative -left-20 pl-10">
-                        <svg id="send-svg-ID" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                    </button>
+            <div class="input">
+                <div class="input-send-bar">
+                    <input id="questionInput" class="input-bar" placeholder="Send a Message" type="text" name="text">
                     <button id="micB" onclick="runSpeechRecog()">
                         <svg id="mic-svg-ID" class="speaker h-6 w-6" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                             <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
                             <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
                         </svg>
                     </button>
+                    <button id="sendB">
+                        <svg id="send-svg-ID" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
                 </div>
-                <div class="text-under-input-bar text-xs py-3 opacity-70">Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. 
+                <div class="text-under-input-bar">Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. 
                     <a class="underline" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" title="Original ChatGPT Release Notes">ChatGPT Mar 23 Version
                     </a>
                 </div>
             </div>
         </div>
-        
-        <div class="right2 w-[78vw] flex flex-row items-center py-3 h-fit">
-            <div class="top-box py-3 px-6 flex space-x-6 w-[73.5vw]" style="margin-bottom:1vh">
+        <div class="right2">
+            <div class="top-box space-x-6">
                 <a class="a-link" href="https://linktr.ee/itsadityakr27" title="Get Connected" target="_blank">
                     <svg id="github-svg-ID" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
                         <path d="M24,4C12.954,4,4,12.954,4,24c0,8.887,5.801,16.411,13.82,19.016h12.36 C38.199,40.411,44,32.887,44,24C44,12.954,35.046,4,24,4z"></path>
@@ -179,25 +179,25 @@
                         <path d="M24,31c-1.525,0-2.874,0.697-3.791,1.774C21.409,32.931,22.681,33,24,33s2.591-0.069,3.791-0.226 C26.874,31.697,25.525,31,24,31z"></path>
                     </svg>
                 </a>
-                <div id="top-box-content-ID" class="linkBoxContent align-text-center items-center justify-center" style="display: flex; align-items: center;"> "Welcome to ChatGPT Version--2.0 : Your Intelligent Friend"
+                <div id="top-box-content-ID" class="linkBoxContent"> "Welcome to ChatGPT Version--2.0 : Your Intelligent Friend"
                 </div>
             </div>
-            <div class="user-question-box m-auto px-6 py-5 flex space-x-6">
+            <div class="user-question-box space-x-6">
                 <img id="user-img-ID" class="user-img w-9" src="https://chat.openai.com/_next/image?url=https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FACg8ocIghdv-4rrY5kAbNNM5IGjfZA7O9i-V-jPjsu82PWOT2i0%3Ds96-c&w=48&q=75" alt="User Image">
                 <div id="user_question_ID">Loading...</div>
             </div>
-            <div class="break-ques-ans py-1"></div>
-            <div class="answer-box px-6 w-[78vw] m-auto py-5 flex space-x-6">
-                <div class="ques-ans-box flex justify-center space-x-6">
+            <div class="break-ques-ans"></div>
+            <div class="answer-box space-x-6">
+                <div class="ques-ans-box space-x-6">
                     <img id="ai-img-ID" class="w-9 h-9" src="https://chat.openai.com/favicon.ico" alt="AI Image">
-                    <div id="ans-content-ID" class="flex space-y-4 flex-col">
+                    <div id="ans-content-ID" class="space-y-4">
                         <div id="user_sol_w_question_ID">Loading...</div>
                         <div id="answer_ID">Loading...</div>
                     </div>
                 </div>
             </div>
-            <div class="send-a-new-message-bar" style="position: absolute;text-align: center;left: 60.27%; margin-top: 13%;; transform: translate(-50%, -50%);">
-                <button class="send-a-new-message-bar-B space-x-2 rounded-md flex justify-center items-center" onclick="reloadPage()" style="height: 40px; width: 700px;    border-width: 3px;margin-top:20vh;">
+            <div class="send-a-new-message-bar">
+                <button class="send-a-new-message-bar-B" onclick="reloadPage()">
                     <svg class="send-2-svg" id="send-2-svg-ID" viewBox="0 0 20 20" stroke-width=".6">
                         <path fill="none" d="M16.999,4.975L16.999,4.975C16.999,4.975,16.999,4.975,16.999,4.975c-0.419-0.4-0.979-0.654-1.604-0.654H4.606c-0.584,0-1.104,0.236-1.514,0.593C3.076,4.928,3.05,4.925,3.037,4.943C3.034,4.945,3.035,4.95,3.032,4.953C2.574,5.379,2.276,5.975,2.276,6.649v6.702c0,1.285,1.045,2.329,2.33,2.329h10.79c1.285,0,2.328-1.044,2.328-2.329V6.649C17.724,5.989,17.441,5.399,16.999,4.975z M15.396,5.356c0.098,0,0.183,0.035,0.273,0.055l-5.668,4.735L4.382,5.401c0.075-0.014,0.145-0.045,0.224-0.045H15.396z M16.688,13.351c0,0.712-0.581,1.294-1.293,1.294H4.606c-0.714,0-1.294-0.582-1.294-1.294V6.649c0-0.235,0.081-0.445,0.192-0.636l6.162,5.205c0.096,0.081,0.215,0.122,0.334,0.122c0.118,0,0.235-0.041,0.333-0.12l6.189-5.171c0.099,0.181,0.168,0.38,0.168,0.6V13.351z"></path>
                     </svg>
@@ -208,5 +208,4 @@
     </div>
 <script src="/static/js/script.js"></script>
 </body>
-
 </html>

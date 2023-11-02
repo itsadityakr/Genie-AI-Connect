@@ -7,6 +7,9 @@
     --border-col: #000000;
     --shadow-col: #000000;
 }
+.html{
+    background: var(--background-1-col);
+}
 .body{
     font-family: 'Poppins', sans-serif;
 }

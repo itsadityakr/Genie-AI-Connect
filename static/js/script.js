@@ -110,20 +110,26 @@ function copyToInput(content) {
 }
 
 
-
-
-
 runSpeechRecog = () => {
-  document.getElementById("questionInput").value = "Loading text..."; // Changed innerHTML to value
-  var action = document.getElementById('mic-svg-ID');
-  let recognition = new webkitSpeechRecognition();
-  recognition.onstart = () => {
-     action.innerHTML = "Listening...";
+  const questionInput = document.getElementById("questionInput");
+  const micB = document.getElementById("micB");
+  
+  if (micB.classList.contains("listening")) {
+    micB.classList.remove("listening");
+    recognition.stop();
+    micB.textContent = "Speech";
+  } else {
+    questionInput.value = "Listening...";
+
+    let recognition = new webkitSpeechRecognition();
+    recognition.onstart = () => {
+      micB.classList.add("listening");
+    }
+    recognition.onresult = (e) => {
+      var transcript = e.results[0][0].transcript;
+      questionInput.value = transcript;
+      micB.classList.remove("listening");
+    }
+    recognition.start();
   }
-  recognition.onresult = (e) => {
-     var transcript = e.results[0][0].transcript;
-     document.getElementById('questionInput').value = transcript; // Changed innerHTML to value
-     action.innerHTML = "Speech"; // Restore the button text
-  }
-  recognition.start();
 }

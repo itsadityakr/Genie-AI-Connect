@@ -19,6 +19,7 @@ Box Shadow Colors:
 #000000 - Black box shadow color.
 */
 
+
 #theme-change-svg-ID {
     position: absolute;
     width: auto;
@@ -38,6 +39,7 @@ Box Shadow Colors:
 }
 
 .light-theme {
+    
     .main {
         background: #e91b1b;
         color:#495E57;

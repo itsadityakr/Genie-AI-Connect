@@ -46,14 +46,18 @@
 #send-svg-ID:hover {
     stroke: #ffffff;
     fill: none;
-    transform: rotate(45deg);
+    transform: rotate(45deg) scale(1.15);
 }
 
 #theme-change-svg-ID:hover{
-    transform: scaleX(-1);
+    transform: scaleX(-1) scale(1.15);
 }
 
 .send-a-new-message-bar-B:hover{
     border-color: #F03861;
     box-shadow: 1px 1px 1px #000000;
+}
+
+#mic-svg-ID:hover{
+    transform: scale(1.15);
 }
