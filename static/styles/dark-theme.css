@@ -39,7 +39,12 @@ Box Shadow Colors:
 }
 
 .light-theme {
-    
+    .html{
+        background: var(--background-1-col);
+    }
+    .body{
+        font-family: 'Poppins', sans-serif;
+    }
     .main {
         background: #e91b1b;
         color:#495E57;

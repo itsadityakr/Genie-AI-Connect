@@ -1,4 +1,4 @@
-async function postData(url = "", data = {}) { 
+async function postData(url = "", data = {}) {
   const response = await fetch(url, {
     method: "POST",
     headers: {
@@ -8,16 +8,41 @@ async function postData(url = "", data = {}) {
   });
   return response.json();
 }
-sendB.addEventListener("click", async () => { 
-  questionInput = document.getElementById("questionInput").value;
+
+async function typeWriter(element, text) {
+  const speed = 10;
+  for (let i = 0; i < text.length; i++) {
+    element.innerHTML += text.charAt(i);
+    await new Promise(resolve => setTimeout(resolve, speed));
+  }
+}
+
+// Event listener for a button with the id "sendB"
+sendB.addEventListener("click", async () => {
+  // Get the value of an input field with the id "questionInput"
+  const questionInput = document.getElementById("questionInput").value;
+
+  // Clear the input field
   document.getElementById("questionInput").value = "";
+
+  // Display or hide HTML elements with class "right2" and "right1"
   document.querySelector(".right2").style.display = "block";
   document.querySelector(".right1").style.display = "none";
+
+  // Set the inner HTML of elements with IDs "user_question_ID" and "user_sol_w_question_ID"
   user_question_ID.innerHTML = questionInput;
   user_sol_w_question_ID.innerHTML = questionInput;
-  let result = await postData("/api", { "question": questionInput });
-  answer_ID.innerHTML = result.answer;
+
+  // Perform a POST request using the postData function
+  const result = await postData("/api", { "question": questionInput });
+
+  // Clear existing content in the answer element
+  answer_ID.innerHTML = "";
+
+  // Call the typeWriter function to simulate typing the answer
+  await typeWriter(answer_ID, result.answer);
 });
+
 
 
 
