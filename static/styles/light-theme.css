@@ -1,7 +1,7 @@
 :root {
-    --background-1-col: #FEF2F2;
-    --background-2-col: #f5c85f;
-    --background-3-col: #F03861;
+    --background-1-col: #ffffff;
+    --background-2-col: #fca311;
+    --background-3-col: #14203d;
     --background-4-col: #ffffff;
     --text-col: #000000;
     --border-col: #000000;
@@ -210,3 +210,111 @@ input.input-bar::placeholder {
 #send-a-new-message-bar-B-text-ID {
     color: var(--text-col);
 }
+#plus-svg-ID {
+    stroke: #000000;
+    fill: none;
+}
+
+#message-svg-ID {
+    stroke: #000000;
+    fill: #ffffff;
+}
+
+#three-dots-svg-ID {
+    fill: #000000;
+}
+
+#delete-svg-ID {
+    stroke: #000000;
+    fill: #ffffff;
+}
+
+#copy-clipboard-svg-ID {
+    stroke: #000000;
+    fill: #ffffff;
+}
+
+#copy-send-bar-svg-ID {
+    stroke: #000000;
+    fill: #ffffff;
+}
+
+#examples-svg-ID {
+    stroke: #000000;
+    fill: none;
+}
+
+#capabilities-svg-ID {
+    stroke: #000000;
+    fill: none;
+}
+
+#limitations-svg-ID {
+    stroke: #000000;
+    fill: none;
+}
+
+#send-svg-ID {
+    stroke: #ffffff;
+    fill: none;
+}
+
+#mic-svg-ID{
+    stroke: #ffffff;
+    fill: #ffffff;
+}
+
+.send-2-svg path,
+.send-2-svg polygon,
+.send-2-svg rect {
+    fill: #000000;
+}
+
+.send-2-svg circle {
+    stroke: #000000;
+    stroke-width: 1;
+}
+
+#github-svg-ID path:nth-child(1) {
+    fill: #000000;
+}
+
+#send-2-svg-ID{
+    stroke: #000000;
+}
+
+#github-svg-ID path:nth-child(2),
+#github-svg-ID path:nth-child(3),
+#github-svg-ID path:nth-child(4),
+#github-svg-ID path:nth-child(5) {
+    fill: #ddbaff;
+}
+
+#theme-change-svg-ID path:nth-child(2) {
+    fill: #ED1C24;
+}
+
+#theme-change-svg-ID path:nth-child(3) {
+    fill: #0066B3;
+}
+
+#theme-change-svg-ID path:nth-child(4) {
+    fill: #FFF200;
+}
+
+#theme-change-svg-ID path:nth-child(5) {
+    fill: #F58220;
+}
+
+#theme-change-svg-ID path:nth-child(6) {
+    fill: #00A65D;
+}
+
+#theme-change-svg-ID path:nth-child(7) {
+    fill: #5C2D91;
+}
+
+#theme-change-svg-ID path:nth-child(8) {
+    fill: #FFFFFF;
+}
+

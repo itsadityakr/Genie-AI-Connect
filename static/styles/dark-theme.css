@@ -1,13 +1,13 @@
 /* 
 Background Colors:
-#FEF2F2 - Light pinkish background.
-#f5c85f - Yellowish background.
+#3f27b6 - Light pinkish background.
+#7371fc - Yellowish background.
 #F03861 - Dark pinkish background.
 #ffffff - White background.
 
 Text Colors:
 #000000 - Black text color.
-#FEF2F2 - White text color.
+#3f27b6 - White text color.
 #ffffff - White text color.
 #000000 - Black text color.
 
@@ -46,23 +46,23 @@ Box Shadow Colors:
         font-family: 'Poppins', sans-serif;
     }
     .main {
-        background: #FEF2F2;
+        background: #3f27b6;
         color:#495E57;
     }
     .left {
-        background: #f5c85f;
+        background: #5754ff;
         color:#495E57;
         box-shadow: 1px 1px 1px 1px #000000;
     }
     
     .new-chat-B {
-        background:#FEF2F2;
-        border-color: #000000;
+        background:#3f27b6;
+        border-color: #ffffff;
         box-shadow: 1px 1px 2px #000000;
     }
     
     #new-chat-B-text-ID {
-        color:#000000;
+        color:#ffffff;
     }
     
     .content {
@@ -72,10 +72,10 @@ Box Shadow Colors:
     .search-chat{
         border-width: 0px;
         border-style: solid;
-        border-color: #F03861;
-        background: #ffffff;
+        border-color: #3f27b6;
+        background: #c1b2ff;
         box-shadow: 1px 1px 2px rgb(0, 0, 0);
-        color: #000000;
+        color: #ffffff;
         border-left-width: 8px;
     }
     
@@ -84,25 +84,25 @@ Box Shadow Colors:
     }
     
     .dropdown {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #c1b2ff;
+        color: #ffffff;
     }
     
     .dropdown-B {
-        color: #000000;
+        color: #ffffff;
     }
     
     .text-title {
-     color: #000000;
+     color: #ffffff;
     }
     
     .examples-text{
-        color: #000000;
+        color: #ffffff;
     }
     
     .exB1 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -110,8 +110,8 @@ Box Shadow Colors:
     }
     
     .exB2 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -119,8 +119,8 @@ Box Shadow Colors:
     }
     
     .exB3 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -128,12 +128,12 @@ Box Shadow Colors:
     }
     
     .capabilities-text{
-        color: #000000;
+        color: #ffffff;
     }
     
     .capB1 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -141,8 +141,8 @@ Box Shadow Colors:
     }
     
     .capB2 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -150,8 +150,8 @@ Box Shadow Colors:
     }
     
     .capB3 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -159,12 +159,12 @@ Box Shadow Colors:
     }
     
     .limitations-text {
-        color: #000000;
+        color: #ffffff;
     }
     
     .limB1 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -172,8 +172,8 @@ Box Shadow Colors:
     }
     
     .limB2 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -181,8 +181,8 @@ Box Shadow Colors:
     }
     
     .limB3 {
-        background:#f5c85f;
-        color: #000000;
+        background:#7371fc;
+        color: #ffffff;
         border-width: 0px;
         border-style: solid;
         border-color: #F03861;
@@ -201,17 +201,17 @@ Box Shadow Colors:
     }
     
     .text-under-input-bar {
-        color: #000000;
+        color: #ffffff;
         font-weight: bold;
     }
     
     #top-box-content-ID{
-        color: #000000;
+        color: #ffffff;
     }
     
     .user-question-box{
         background: #F03861;
-        color: #FEF2F2;
+        color: #3f27b6;
         border-radius: 10px;
     }
     
@@ -221,32 +221,150 @@ Box Shadow Colors:
     }
     
     .answer-box{
-        background: #f5c85f;
+        background: #7371fc;
         border-radius: 10px;
     }
     
     #user_sol_w_question_ID{
         font-weight: bold;
-        color: #000000;
+        color: #ffffff;
     }
     #answer_ID{
-        color: #000000;
+        color: #ffffff;
     }
     
     .send-a-new-message-bar-B{
-        background:#FEF2F2;
-        border-color: #000000;
+        background:#3f27b6;
+        border-color: #ffffff;
         box-shadow: 1px 1px 2px #000000;
     }
     
     #send-a-new-message-bar-B-text-ID{
-        color: #000000;
+        color: #ffffff;
     }
     #send-2-svg-ID{
-        stroke: #000000;
+        stroke: #ffffff;
     }
-    
-    
+    /* 
+Background Colors:
+#000000 - Black color.
+#ffffff - White color.
+#ddbaff - A shade of purple.
+#ED1C24 - Red color.
+#0066B3 - Blue color.
+#FFF200 - Yellow color.
+#F58220 - Orange color.
+#00A65D - Green color.
+#5C2D91 - Purple color.
+*/
+#plus-svg-ID {
+    stroke: #000000;
+    fill: none;
+}
+
+#message-svg-ID {
+    stroke: #000000;
+    fill: #ffffff;
+}
+
+#three-dots-svg-ID {
+    fill: #000000;
+}
+
+#delete-svg-ID {
+    stroke: #000000;
+    fill: #ffffff;
+}
+
+#copy-clipboard-svg-ID {
+    stroke: #000000;
+    fill: #ffffff;
+}
+
+#copy-send-bar-svg-ID {
+    stroke: #000000;
+    fill: #ffffff;
+}
+
+#examples-svg-ID {
+    stroke: #000000;
+    fill: none;
+}
+
+#capabilities-svg-ID {
+    stroke: #000000;
+    fill: none;
+}
+
+#limitations-svg-ID {
+    stroke: #000000;
+    fill: none;
+}
+
+#send-svg-ID {
+    stroke: #ffffff;
+    fill: none;
+}
+
+#mic-svg-ID{
+    stroke: #ffffff;
+    fill: #ffffff;
+}
+
+.send-2-svg path,
+.send-2-svg polygon,
+.send-2-svg rect {
+    fill: #000000;
+}
+
+.send-2-svg circle {
+    stroke: #000000;
+    stroke-width: 1;
+}
+
+#github-svg-ID path:nth-child(1) {
+    fill: #000000;
+}
+
+#send-2-svg-ID{
+    stroke: #000000;
+}
+
+#github-svg-ID path:nth-child(2),
+#github-svg-ID path:nth-child(3),
+#github-svg-ID path:nth-child(4),
+#github-svg-ID path:nth-child(5) {
+    fill: #ddbaff;
+}
+
+#theme-change-svg-ID path:nth-child(2) {
+    fill: #ED1C24;
+}
+
+#theme-change-svg-ID path:nth-child(3) {
+    fill: #0066B3;
+}
+
+#theme-change-svg-ID path:nth-child(4) {
+    fill: #FFF200;
+}
+
+#theme-change-svg-ID path:nth-child(5) {
+    fill: #F58220;
+}
+
+#theme-change-svg-ID path:nth-child(6) {
+    fill: #00A65D;
+}
+
+#theme-change-svg-ID path:nth-child(7) {
+    fill: #5C2D91;
+}
+
+#theme-change-svg-ID path:nth-child(8) {
+    fill: #FFFFFF;
+}
+
 }
 
 @media screen and (min-width: 900px) {
