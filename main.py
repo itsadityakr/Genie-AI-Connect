@@ -37,7 +37,7 @@ def qa():
             return jsonify(data)
         else:
             response = openai.Completion.create(
-                    model="text-davinci-003",
+                    model="gpt-3.5-turbo-instruct",
                     prompt=question,
                     temperature=0.7,
                     max_tokens=4000,
