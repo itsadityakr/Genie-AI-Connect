@@ -2,10 +2,10 @@ from flask import Flask, render_template, jsonify, request, redirect, url_for
 from flask_pymongo import PyMongo
 import openai
 
-openai.api_key = "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"
+openai.api_key = "YOUR API KEY"
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb+srv://itsadityakr27:5EOOKvynEqF4N7ER@cluster0.seivtjq.mongodb.net/ChatGPTv2"
+app.config["MONGO_URI"] = "YOUR MONGODB CLUSTER"
 mongo = PyMongo(app)
 
 @app.route("/")
