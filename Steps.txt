@@ -1,0 +1,24 @@
+Install :-
+1- mongodb-compass-1.40.3-win32-x64
+2- node-v18.18.1-x64
+3- tailwindcss-windows-x64
+
+Copy The files to directory
+1- "tailwindcss-3.3.3" to C:\
+2- "npm" to C:\Users\%User%\AppData\Roaming
+
+Update Environment Varialbes "Path"
+1- C:\Users\Aditya\AppData\Roaming\npm
+2- C:\tailwindcss-3.3.3
+3- C:\Program Files\nodejs
+
+Install Python Libraries in terminal
+1- pip install flask
+2- pip install pymongo
+3- pip install open ai
+4- pip install flask_pymongo
+5- pip install openai==0.28
+
+Run these codes in VSCode Console
+1- npm run tw
+2- python main.py
